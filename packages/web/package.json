@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "react-dom": "^16.6.1",
-    "react-scripts": "2.1.1"
+    "react-scripts": "2.1.1",
+    "styled-components": "^4.0.3"
   },
   "peerDependencies": {
     "react": "*"
