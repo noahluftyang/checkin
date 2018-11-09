@@ -1,0 +1,10 @@
+{
+  "root": true,
+  "extends": "eslint:all",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "rules": {
+    "quotes": ["error", "single"]
+  }
+}
