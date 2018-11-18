@@ -1,22 +1,40 @@
-import React, { Component, createRef } from 'react';
+import React, { createRef, PureComponent } from 'react';
 
-export class MapComponent extends Component {
+import { POSITIONS } from './constants';
+
+export class MapComponent extends PureComponent {
   map;
 
   mapRef = createRef();
 
   componentDidMount() {
     this.createMap();
-    this.setCurrentPosition();
+    this.createMarker();
+    // this.setCurrentPosition();
   }
 
   createMap = () => {
     const options = {
-      center: new window.daum.maps.LatLng(33.450701, 126.570667),
-      level: 4,
+      center: new window.daum.maps.LatLng(37.504283, 126.95564),
+      level: 3,
     };
 
     this.map = new window.daum.maps.Map(this.mapRef.current, options);
+  };
+
+  createMarker = () => {
+    POSITIONS.forEach(({ latLng, title }) => {
+      const marker = new window.daum.maps.Marker({
+        clickable: true,
+        map: this.map,
+        position: latLng,
+        title,
+      });
+
+      window.daum.maps.event.addListener(marker, 'click', () => {
+        console.log('click!', title);
+      });
+    });
   };
 
   setCurrentPosition = () => {

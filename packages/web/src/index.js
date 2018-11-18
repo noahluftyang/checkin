@@ -1,7 +1,8 @@
 import './index.css';
 import React, { StrictMode } from 'react';
-import { App } from './App';
 import { unstable_createRoot as createRoot } from 'react-dom';
+
+import { App } from './containers';
 // import * as serviceWorker from './serviceWorker';
 
 createRoot(document.getElementById('root')).render(

@@ -1,17 +1,17 @@
-import { Router } from '@reach/router';
 import React, { Component, Suspense, lazy } from 'react';
 
-import { Nav } from './components/Nav';
+import { StyledRouter } from './styles';
+import { Nav } from '../../components';
 
-const HomePage = lazy(() => import('./Home'));
+const HomePage = lazy(() => import('../Home'));
 
 export class App extends Component {
   render() {
     return (
       <Suspense fallback={null}>
-        <Router>
+        <StyledRouter>
           <HomePage path="/" />
-        </Router>
+        </StyledRouter>
         <Nav />
       </Suspense>
     );

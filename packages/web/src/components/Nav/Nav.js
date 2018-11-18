@@ -4,8 +4,8 @@ import { NavLink } from './styles';
 
 export const NavComponent = ({ className }) => (
   <nav className={className}>
-    <NavLink to="/">Profile</NavLink>
-    <NavLink to="/map">Map</NavLink>
+    <NavLink to="/profile">Profile</NavLink>
+    <NavLink to="/">Map</NavLink>
     <NavLink to="/history">History</NavLink>
   </nav>
 );

@@ -178,7 +178,8 @@ Java.gitignore
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -355,7 +356,7 @@ fastlane/test_output
 
 iOSInjectionProject/
 
-.vscode/*
+.vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
