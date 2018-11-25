@@ -1,8 +1,0 @@
-{
-  "compileOnSave": false,
-  "compilerOptions": {
-    "jsx": "preserve",
-    "noUnusedLocals": false,
-    "noUnusedParameters": true
-  }
-}

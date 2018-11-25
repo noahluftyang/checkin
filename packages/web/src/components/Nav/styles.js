@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { NavComponent } from './Nav';
 
 export const Nav = styled(NavComponent)`
+  background-color: #fff;
   border-top: 1px solid #d3d3d3;
   bottom: 0;
   left: 0;

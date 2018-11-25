@@ -1,3 +1,4 @@
+import { navigate } from '@reach/router';
 import React, { createRef, PureComponent } from 'react';
 
 import { POSITIONS } from './constants';
@@ -33,6 +34,7 @@ export class MapComponent extends PureComponent {
 
       window.daum.maps.event.addListener(marker, 'click', () => {
         console.log('click!', title);
+        navigate('/checkin');
       });
     });
   };

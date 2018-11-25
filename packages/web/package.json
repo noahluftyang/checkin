@@ -14,7 +14,8 @@
     "styled-components": "^4.0.3"
   },
   "peerDependencies": {
-    "react": "*"
+    "react": "*",
+    "react-redux": "*"
   },
   "browserslist": [
     ">0.2%",
