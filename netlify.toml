@@ -1,5 +1,5 @@
 [build]
-  base = "packages/web/"
+  command = "npm run bootstrap && cd packages/web/ && npm run build"
   publish = "packages/web/build/"
 
 [build.environment]
