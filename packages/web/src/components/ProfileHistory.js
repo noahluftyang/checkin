@@ -1,22 +1,12 @@
 import React, { PureComponent } from 'react';
+import styled from 'styled-components';
 
-import {
-  CheckinCount,
-  CheckinItem,
-  CheckinList,
-  Circle,
-  Icon,
-  Information,
-  Line,
-  Mention,
-  Sub,
-  Title,
-} from './styles';
-
-export class ListComponent extends PureComponent {
+class ProfileHistoryComponent extends PureComponent {
   render() {
+    const { className, locations } = this.props;
+
     return (
-      <div className={this.props.className}>
+      <div className={className}>
         <CheckinCount>
           <strong>9</strong>
           <span> Check-ins</span>
@@ -82,7 +72,7 @@ export class ListComponent extends PureComponent {
               <Mention>여긴 법학관! 나랑 밥먹을 사람~</Mention>
             </Information>
           </CheckinItem>
-          {this.props.locations.map(({ message, time, title }) => (
+          {locations.map(({ message, time, title }) => (
             <CheckinItem>
               <Icon>
                 <Line />
@@ -101,3 +91,82 @@ export class ListComponent extends PureComponent {
     );
   }
 }
+
+const CheckinCount = styled.p`
+  border-bottom: 2px solid #d3d3d3;
+  padding: 0.5rem 1rem;
+
+  & > strong {
+  }
+
+  & > span {
+    color: gray;
+    font-weight: 500;
+  }
+`;
+
+const CheckinList = styled.ul`
+  list-style: none;
+  max-height: 50vh;
+  overflow: auto;
+  padding: 0.5rem 0;
+`;
+
+const CheckinItem = styled.li`
+  display: flex;
+
+  & > *:not(:first-child) {
+    margin-left: 1rem;
+  }
+`;
+
+const Icon = styled.div`
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  position: relative;
+`;
+
+const Circle = styled.div`
+  background-color: #3a94fb;
+  border-radius: 50%;
+  height: 3rem;
+  margin: 0.5rem 0;
+  width: 3rem;
+  z-index: 1;
+`;
+
+const Line = styled.div`
+  background-color: #3a94fb;
+  height: 100%;
+  position: absolute;
+  right: 22px;
+  width: 3px;
+`;
+
+const Information = styled.div`
+  border-bottom: 2px solid #d3d3d3;
+  flex: 4;
+  padding: 0.5rem 0;
+`;
+
+const Title = styled.strong`
+  display: block;
+  margin-bottom: 0.5rem;
+`;
+
+const Sub = styled.p`
+  color: gray;
+  font-size: 0.8rem;
+  line-height: 1.2;
+`;
+
+const Mention = styled.p`
+  margin-top: 0.5rem;
+`;
+
+export const ProfileHistory = styled(ProfileHistoryComponent)`
+  background-color: #fff;
+  border-top: 1px solid #d3d3d3;
+  flex: 1;
+`;

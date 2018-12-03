@@ -11,6 +11,7 @@ export const Nav = styled(NavComponent)`
   display: flex;
   position: fixed;
   right: 0;
+  z-index: 10;
 `;
 
 export const NavLink = styled(Link)`

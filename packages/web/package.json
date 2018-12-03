@@ -13,9 +13,6 @@
     "sanitize.css": "8.0.0",
     "styled-components": "4.1.2"
   },
-  "devDependencies": {
-    "@stillmine/eslint-config": "^0.1.0"
-  },
   "peerDependencies": {
     "react": "*",
     "react-redux": "*",

@@ -1,0 +1,1 @@
+export { CheckinSpots } from './CheckinSpots';

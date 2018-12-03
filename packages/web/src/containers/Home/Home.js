@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { List, Map, Search } from '../../components';
+import { Map, ProfileHistory, ProfileSearch } from '../../components';
 
 export const HomeContainer = ({ locations }) => (
   <>
-    <Search />
+    <ProfileSearch />
     <Map />
-    <List locations={locations} />
+    <ProfileHistory locations={locations} />
   </>
 );

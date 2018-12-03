@@ -1,12 +1,15 @@
 {
   "private": true,
   "scripts": {
-    "bootstrap": "lerna clean -y && lerna bootstrap --hoist"
+    "bootstrap": "lerna clean -y && lerna bootstrap --hoist",
+    "develop": "lerna run develop --parallel"
   },
   "dependencies": {
     "react": "^16.6.1",
     "react-redux": "^5.1.1",
-    "redux": "4.0.1"
+    "redux": "4.0.1",
+    "redux-promise": "^0.6.0",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@types/node": "10.12.10",
