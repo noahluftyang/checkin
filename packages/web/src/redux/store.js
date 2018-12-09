@@ -1,12 +1,13 @@
-import { createStore } from 'redux';
+import { applyMiddleware, createStore } from 'redux';
+import thunk from 'redux-thunk';
 
 import { enhancer } from './enhancer';
 import { rootReducer } from './reducer';
 
-export function configureStore() {
+export function configureStore () {
   if (module.hot) {
     module.hot.accept('./reducer', () => {});
   }
 
-  return createStore(rootReducer, enhancer());
+  return createStore(rootReducer, enhancer(applyMiddleware(thunk)));
 }

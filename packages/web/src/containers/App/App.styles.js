@@ -2,6 +2,13 @@ import { Router } from '@reach/router';
 import styled, { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+  }
+
   html {
     font-family: sans-serif;
     text-size-adjust: 100%;
@@ -11,6 +18,14 @@ export const GlobalStyle = createGlobalStyle`
     background-color: #eee;
     display: flex;
     font-family: 'Noto Sans KR', 'Roboto';
+  }
+
+  a {
+    all: unset;
+  }
+
+  button {
+    all: unset;
   }
 
   h4 {
@@ -23,12 +38,16 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 400;
   }
 
-  button {
-    all: unset;
-  }
-
   input {
     border: 0;
+  }
+
+  textarea {
+    resize: none;
+
+    &:focus {
+      outline: 0;
+    }
   }
 
   #root {

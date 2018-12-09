@@ -1,12 +1,22 @@
-import React from 'react';
+import { navigate } from '@reach/router';
+import React, { PureComponent } from 'react';
 
-import { CheckinSearch, CheckinSpots } from '../../components';
+import { BaseNav, CheckinSearch, CheckinSpots } from '../../components';
 
-export const CheckinContainer = () => {
-  return (
-    <>
-      <CheckinSearch />
-      <CheckinSpots />
-    </>
-  );
-};
+export class CheckinContainer extends PureComponent {
+  navigatePost = e => {
+    const name = e.currentTarget.value;
+    this.props.setCheckInName(name);
+    navigate('/post');
+  };
+
+  render() {
+    return (
+      <>
+        <CheckinSearch />
+        <CheckinSpots navigatePost={this.navigatePost} />
+        <BaseNav />
+      </>
+    );
+  }
+}

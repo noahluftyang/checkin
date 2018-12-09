@@ -1,9 +1,11 @@
+import { distanceInWordsToNow } from 'date-fns';
+import ko from 'date-fns/locale/ko';
 import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 
 class ProfileHistoryComponent extends PureComponent {
   render() {
-    const { className, locations } = this.props;
+    const { className, history } = this.props;
 
     return (
       <div className={className}>
@@ -12,77 +14,17 @@ class ProfileHistoryComponent extends PureComponent {
           <span> Check-ins</span>
         </CheckinCount>
         <CheckinList>
-          <CheckinItem>
-            <Icon>
-              <Line />
-              <Circle />
-            </Icon>
-            <Information>
-              <Title>중앙도서관</Title>
-              <Sub>흑석동</Sub>
-              <Sub>오늘 오후 10:09</Sub>
-              <Mention>19시간째 경영전략 공부중</Mention>
-            </Information>
-          </CheckinItem>
-          <CheckinItem>
-            <Icon>
-              <Line />
-              <Circle />
-            </Icon>
-            <Information>
-              <Title>해방광장</Title>
-              <Sub>흑석동</Sub>
-              <Sub>오늘 오후 8:08</Sub>
-              <Mention>광장으로 오세요!</Mention>
-            </Information>
-          </CheckinItem>
-          <CheckinItem>
-            <Icon>
-              <Line />
-              <Circle />
-            </Icon>
-            <Information>
-              <Title>기숙사식당(블루미르홀)</Title>
-              <Sub>흑석동</Sub>
-              <Sub>오늘 오후 8:07</Sub>
-              <Mention>오늘 점심 무엇?ㄷㄷ</Mention>
-            </Information>
-          </CheckinItem>
-          <CheckinItem>
-            <Icon>
-              <Line />
-              <Circle />
-            </Icon>
-            <Information>
-              <Title>법학관</Title>
-              <Sub>흑석동</Sub>
-              <Sub>오늘 오후 8:06</Sub>
-              <Mention>여긴 법학관! 나랑 밥먹을 사람~</Mention>
-            </Information>
-          </CheckinItem>
-          <CheckinItem>
-            <Icon>
-              <Line />
-              <Circle />
-            </Icon>
-            <Information>
-              <Title>법학관</Title>
-              <Sub>흑석동</Sub>
-              <Sub>오늘 오후 8:06</Sub>
-              <Mention>여긴 법학관! 나랑 밥먹을 사람~</Mention>
-            </Information>
-          </CheckinItem>
-          {locations.map(({ message, time, title }) => (
+          {history.map(({ comment, time, name }) => (
             <CheckinItem>
               <Icon>
                 <Line />
                 <Circle />
               </Icon>
               <Information>
-                <Title>{title}</Title>
+                <Title>{name}</Title>
                 <Sub>흑석동</Sub>
-                <Sub>{time}</Sub>
-                <Mention>{message}</Mention>
+                <Sub>{distanceInWordsToNow(time, { locale: ko })}</Sub>
+                <Mention>{comment}</Mention>
               </Information>
             </CheckinItem>
           ))}
@@ -95,9 +37,6 @@ class ProfileHistoryComponent extends PureComponent {
 const CheckinCount = styled.p`
   border-bottom: 2px solid #d3d3d3;
   padding: 0.5rem 1rem;
-
-  & > strong {
-  }
 
   & > span {
     color: gray;
@@ -162,6 +101,8 @@ const Sub = styled.p`
 `;
 
 const Mention = styled.p`
+  font-size: 1.5rem;
+  font-weight: 700;
   margin-top: 0.5rem;
 `;
 

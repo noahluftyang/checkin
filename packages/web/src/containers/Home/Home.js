@@ -1,11 +1,13 @@
 import React from 'react';
 
-import { Map, ProfileHistory, ProfileSearch } from '../../components';
+import { BaseNav, Map, ProfileHistory, ProfileSearch, SuccessModal } from '../../components';
 
-export const HomeContainer = ({ locations }) => (
+export const HomeContainer = ({ history, success }) => (
   <>
     <ProfileSearch />
     <Map />
-    <ProfileHistory locations={locations} />
+    <ProfileHistory history={history} />
+    <BaseNav />
+    {success ? <SuccessModal /> : null}
   </>
 );

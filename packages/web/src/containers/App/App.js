@@ -2,8 +2,7 @@ import 'sanitize.css';
 
 import React, { Component, Suspense, lazy } from 'react';
 
-import { GlobalStyle, StyledRouter } from './styles';
-import { Nav } from '../../components';
+import { GlobalStyle, StyledRouter } from './App.styles';
 import { ReduxProvider } from '../../redux';
 
 const HomePage = lazy(() => import('../Home'));
@@ -21,7 +20,6 @@ export class App extends Component {
             <CheckinPage path="checkin" />
             <PostPage path="post" />
           </StyledRouter>
-          <Nav />
         </Suspense>
       </ReduxProvider>
     );

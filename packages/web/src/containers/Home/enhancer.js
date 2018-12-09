@@ -2,8 +2,9 @@ import { connect } from 'react-redux';
 
 import { HomeContainer } from './Home';
 
-const mapStateToProps = ({ location }) => ({
-  locations: location.locations,
+const mapStateToProps = ({ checkin, history }) => ({
+  history,
+  success: checkin.success,
 });
 const mapDispatchToProps = {};
 
