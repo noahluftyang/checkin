@@ -12,7 +12,7 @@
     "redux-thunk": "2.3.0"
   },
   "devDependencies": {
-    "@stillmine/eslint-config": "^0.2.0",
+    "@stillmine/eslint-config": "0.2.0",
     "@types/node": "10.12.12",
     "@types/reach__router": "1.2.2",
     "@types/react": "16.7.13",
@@ -33,7 +33,7 @@
     "react-scripts": "2.1.1",
     "react-test-renderer": "16.6.3",
     "rimraf": "2.6.2",
-    "tslint": "^5.11.0",
+    "tslint": "5.11.0",
     "typescript": "3.2.2",
     "typescript-eslint-parser": "21.0.2"
   }
