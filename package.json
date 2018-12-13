@@ -15,7 +15,7 @@
     "@stillmine/eslint-config": "0.2.0",
     "@types/node": "10.12.12",
     "@types/reach__router": "1.2.2",
-    "@types/react": "16.7.13",
+    "@types/react": "16.7.17",
     "@types/react-dom": "16.0.11",
     "@types/react-native": "0.57.15",
     "@types/react-redux": "6.0.11",
