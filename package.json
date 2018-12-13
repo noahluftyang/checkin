@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@stillmine/eslint-config": "0.2.0",
-    "@types/node": "10.12.12",
+    "@types/node": "10.12.15",
     "@types/reach__router": "1.2.2",
     "@types/react": "16.7.13",
     "@types/react-dom": "16.0.11",
