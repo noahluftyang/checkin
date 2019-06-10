@@ -1,4 +1,0 @@
-{
-  "packages": ["packages/*", "../config/packages/*"],
-  "version": "0.0.0"
-}
