@@ -1,6 +1,6 @@
 {
   "root": true,
-  "extends": "@stillmine",
+  "extends": ["@stillmine", "prettier"],
   "globals": {
     "daum": true
   }

@@ -1,8 +1,18 @@
 {
-  "name": "@checkin/web",
+  "name": "checkin",
   "version": "0.1.0",
+  "bugs": {
+    "email": "euihyun.yang.9x@gmail.com",
+    "url": "https://github.com/noahluftyang/checkin/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "email": "euihyun.yang.9x@gmail.com",
+    "name": "Euihyun_Yang",
+    "url": "https://blog-noahyang.netlify.com"
+  },
+  "repository": "git@github.com:noahluftyang/checkin.git",
   "scripts": {
-    "postinstall": "patch-package",
     "build": "react-scripts build",
     "develop": "react-scripts start",
     "test": "react-scripts test",
@@ -13,30 +23,30 @@
     "date-fns": "1.30.1",
     "react": "16.8.6",
     "react-dom": "16.8.6",
-    "react-redux": "7.0.3",
-    "redux": "4.0.1",
+    "react-redux": "7.1.0",
+    "redux": "4.0.4",
     "redux-promise": "0.6.0",
     "redux-thunk": "2.3.0",
-    "sanitize.css": "10.0.0",
-    "styled-components": "4.3.1"
+    "sanitize.css": "11.0.0",
+    "styled-components": "4.3.2"
   },
   "devDependencies": {
-    "@stillmine/eslint-config": "0.5.0",
-    "@types/node": "12.0.7",
+    "@stillmine/eslint-config": "0.7.0",
+    "@types/node": "12.6.8",
     "@types/reach__router": "1.2.4",
-    "@types/react": "16.8.19",
-    "@types/react-dom": "16.8.4",
-    "@types/react-native": "0.57.60",
-    "@types/react-redux": "7.0.9",
-    "@types/styled-components": "4.1.16",
-    "@types/webpack-env": "1.13.9",
+    "@types/react": "16.8.23",
+    "@types/react-dom": "16.8.5",
+    "@types/react-native": "0.60.2",
+    "@types/react-redux": "7.1.1",
+    "@types/styled-components": "4.1.18",
+    "@types/webpack-env": "1.14.0",
     "babel-jest": "24.8.0",
     "cross-env": "5.2.0",
     "enzyme": "3.10.0",
-    "eslint": "5.16.0",
-    "eslint-plugin-import": "2.17.3",
-    "eslint-plugin-jsx-a11y": "6.2.1",
-    "eslint-plugin-react": "7.13.0",
+    "eslint": "6.1.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-react": "7.14.3",
     "jest": "24.8.0",
     "npm-run-all": "4.1.5",
     "patch-package": "6.1.2",
@@ -44,9 +54,12 @@
     "react-scripts": "3.0.1",
     "react-test-renderer": "16.8.6",
     "rimraf": "2.6.3",
-    "tslint": "5.17.0",
-    "typescript": "3.5.1",
+    "tslint": "5.18.0",
+    "typescript": "3.5.3",
     "typescript-eslint-parser": "22.0.0"
+  },
+  "engines": {
+    "node": ">= 10"
   },
   "private": true
 }
